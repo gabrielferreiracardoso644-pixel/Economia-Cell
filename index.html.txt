@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CelularTech | Smartphones até R$ 1000</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <header class="bg-blue-600 text-white sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold flex items-center gap-2">
+                <i class="fa-solid fa-mobile-screen-button"></i> CelularTech
+            </a>
+            <nav class="hidden md:flex space-x-6 font-medium">
+                <a href="#" class="hover:text-blue-200 transition">Início</a>
+                <a href="#produtos" class="hover:text-blue-200 transition">Celulares</a>
+                <a href="#sobre" class="hover:text-blue-200 transition">Sobre</a>
+            </nav>
+            <div class="relative">
+                <button class="bg-blue-700 hover:bg-blue-800 p-2 rounded-full transition relative">
+                    <i class="fa-solid fa-cart-shopping text-xl"></i>
+                    <span id="cart-count" class="absolute -top-1 -right-1 bg-red-500 text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-gradient-to-r bg-blue-900 text-white py-16">
+        <div class="container mx-auto px-4 text-center max-w-3xl">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Smartphone novo por menos de R$ 1.000?</h1>
+            <p class="text-xl text-blue-100 mb-8">Encontre o equilíbrio perfeito entre desempenho, bateria e preço justo. Parcelamento em até 10x sem juros!</p>
+            <a href="#produtos" class="bg-yellow-500 hover:bg-yellow-400 text-blue-950 font-bold px-8 py-3 rounded-lg shadow-lg transition transform hover:scale-105 inline-block">
+                Ver Ofertas
+            </a>
+        </div>
+    </section>
+
+    <div class="container mx-auto px-4 pt-10">
+        <div class="bg-blue-50 border border-blue-200 rounded-xl p-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-filter text-blue-600 text-xl"></i>
+                <span class="font-semibold text-lg text-blue-900">Filtrado por: Celulares até R$ 1.000,00</span>
+            </div>
+            <div class="text-sm text-gray-600">
+                Mostrando 3 de 3 resultados disponíveis
+            </div>
+        </div>
+    </div>
+
+    <main id="produtos" class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition border border-gray-100 overflow-hidden flex flex-col justify-between">
+                <div>
+                    <div class="bg-gray-100 p-6 flex justify-center h-64 items-center">
+                        <i class="fa-solid fa-mobile-screen text-gray-400 text-8xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Melhor Custo-Benefício</span>
+                        <h3 class="text-xl font-bold mt-2">Moto Smartphone Play 64GB</h3>
+                        <p class="text-gray-500 text-sm mt-1">Tela 6.5", Câmera Dupla 50MP, Bateria 5000mAh</p>
+                        <div class="mt-4 flex items-baseline gap-2">
+                            <span class="text-2xl font-black text-gray-900">R$ 799,00</span>
+                            <span class="text-sm text-gray-400 line-through">R$ 999,00</span>
+                        </div>
+                        <p class="text-xs text-green-600 font-medium mt-1">10x de R$ 79,90 sem juros</p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="adicionarAoCarrinho('Moto Smartphone Play')" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-xl transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cart-plus"></i> Comprar
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition border border-gray-100 overflow-hidden flex flex-col justify-between">
+                <div>
+                    <div class="bg-gray-100 p-6 flex justify-center h-64 items-center">
+                        <i class="fa-solid fa-mobile-screen text-gray-400 text-8xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Bateria Gigante</span>
+                        <h3 class="text-xl font-bold mt-2">Redmi Power 128GB</h3>
+                        <p class="text-gray-500 text-sm mt-1">Tela FHD+ 6.7", Bateria 6000mAh, 4GB RAM</p>
+                        <div class="mt-4 flex items-baseline gap-2">
+                            <span class="text-2xl font-black text-gray-900">R$ 949,00</span>
+                        </div>
+                        <p class="text-xs text-green-600 font-medium mt-1">10x de R$ 94,90 sem juros</p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="adicionarAoCarrinho('Redmi Power 128GB')" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-xl transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cart-plus"></i> Comprar
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition border border-gray-100 overflow-hidden flex flex-col justify-between">
+                <div>
+                    <div class="bg-gray-100 p-6 flex justify-center h-64 items-center">
+                        <i class="fa-solid fa-mobile-screen text-gray-400 text-8xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Mais Barato</span>
+                        <h3 class="text-xl font-bold mt-2">Galaxy Pocket Pro 32GB</h3>
+                        <p class="text-gray-500 text-sm mt-1">Tela 6.1", Ideal para aplicativos do dia a dia</p>
+                        <div class="mt-4 flex items-baseline gap-2">
+                            <span class="text-2xl font-black text-gray-900">R$ 629,00</span>
+                            <span class="text-sm text-gray-400 line-through">R$ 749,00</span>
+                        </div>
+                        <p class="text-xs text-green-600 font-medium mt-1">10x de R$ 62,90 sem juros</p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="adicionarAoCarrinho('Galaxy Pocket Pro')" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-xl transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cart-plus"></i> Comprar
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer id="sobre" class="bg-gray-900 text-gray-400 py-12 mt-12 border-t border-gray-800">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h4 class="text-white font-bold text-lg mb-4">CelularTech</h4>
+                <p class="text-sm leading-relaxed">Sua loja especializada em smartphones acessíveis. Levamos tecnologia de ponta para o seu bolso sem pesar no orçamento.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-lg mb-4">Formas de Pagamento</h4>
+                <div class="flex gap-4 text-2xl">
+                    <i class="fa-brands fa-cc-visa" title="Visa"></i>
+                    <i class="fa-brands fa-cc-mastercard" title="Mastercard"></i>
+                    <i class="fa-solid fa-pix text-green-400" title="Pix"></i>
+                </div>
+                <p class="text-xs mt-4">Desconto de 10% no Pix!</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-lg mb-4">Atendimento</h4>
+                <p class="text-sm">Segunda a Sexta: 09h às 18h</p>
+                <p class="text-sm mt-2">suporte@celulartech.com.br</p>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 mt-8 pt-8 border-t border-gray-800 text-center text-xs">
+            &copy; 2026 CelularTech. Todos os direitos reservados. Preços válidos apenas para aparelhos até R$ 1.000,00.
+        </div>
+    </footer>
+
+    <script>
+        let carrinhoContador = 0;
+        function adicionarAoCarrinho(nomeProduto) {
+            carrinhoContador++;
+            document.getElementById('cart-count').innerText = carrinhoContador;
+            alert(`${nomeProduto} adicionado ao carrinho com sucesso!`);
+        }
+    </script>
+</body>
+</html>
